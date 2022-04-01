@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Primary;
 public class DuplicateConfiguration {
 
     @Primary
-    @Bean
+    @Bean(value = "fooFirst")
     public Foo foo1(){
         return new Foo();
     }
 
-    @Bean
+    @Bean(value = "fooSecond")
     public Foo foo2(){
         return new Foo();
     }
